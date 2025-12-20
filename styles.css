@@ -93,6 +93,13 @@ header {
     z-index: 1000;
     padding: 0.75rem 0;
 }
+header.hide {
+    transform: translateY(-100%);
+}
+body {
+    padding-top: 70px; /* height of header */
+}
+
 
 .header-container {
     max-width: var(--container-max-width);
@@ -1177,5 +1184,6 @@ nav a {
         grid-template-columns: repeat(4, 1fr);
     }
 }
+
 
 
