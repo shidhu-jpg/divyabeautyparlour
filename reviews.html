@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <title>Customer Reviews - Divya Beauty Parlour</title>
+    <meta name="description" content="Customer reviews for Divya Beauty Parlour Areraj. Share your experience and rate our services.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        .review-form {
+            max-width: 600px;
+            margin: auto;
+            background: #fff;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+        }
+
+        .review-form label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .review-form input,
+        .review-form textarea {
+            width: 100%;
+            padding: 0.8rem;
+            margin-bottom: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            font-family: inherit;
+        }
+
+        .stars {
+            display: flex;
+            gap: 10px;
+            font-size: 1.8rem;
+            cursor: pointer;
+            margin-bottom: 1.5rem;
+        }
+
+        .stars input {
+            display: none;
+        }
+
+        .stars label {
+            color: #ccc;
+            cursor: pointer;
+        }
+
+        .stars input:checked ~ label,
+        .stars label:hover,
+        .stars label:hover ~ label {
+            color: gold;
+        }
+
+        .stars {
+            flex-direction: row-reverse;
+            justify-content: flex-end;
+        }
+
+        .note {
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--text-medium);
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+    <div class="header-container">
+        <a href="index.html" class="logo">Divya Beauty Parlour</a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="our-work.html">Our Work</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <a href="tel:6202770517" class="header-cta">Call: 6202770517</a>
+    </div>
+</header>
+
+<!-- HERO -->
+<section class="about-hero">
+    <div class="container">
+        <h1>Customer Reviews</h1>
+        <p style="font-size: 1.2rem; color: var(--text-medium);">
+            Apna experience share karein aur hume rate karein
+        </p>
+    </div>
+</section>
+
+<!-- REVIEW FORM -->
+<section class="section">
+    <div class="container">
+        <div class="review-form">
+            <h2 style="text-align:center; margin-bottom:1.5rem;">Give Your Review</h2>
+
+            <form>
+                <label>Your Name</label>
+                <input type="text" placeholder="Enter your name" required>
+
+                <label>Rate Our Service</label>
+                <div class="stars">
+                    <input type="radio" id="star5" name="rating"><label for="star5">★</label>
+                    <input type="radio" id="star4" name="rating"><label for="star4">★</label>
+                    <input type="radio" id="star3" name="rating"><label for="star3">★</label>
+                    <input type="radio" id="star2" name="rating"><label for="star2">★</label>
+                    <input type="radio" id="star1" name="rating"><label for="star1">★</label>
+                </div>
+
+                <label>Your Review</label>
+                <textarea rows="5" placeholder="Write your experience..." required></textarea>
+<!-- REVIEWS DISPLAY -->
+<section class="section" style="background: var(--bg-offwhite);">
+    <div class="container">
+        <div class="section-title">
+            <h2>Customer Reviews ⭐</h2>
+            <p style="color: var(--text-medium);">
+                Areraj ke real customers ke real experiences
+            </p>
+        </div>
+
+        <div class="reviews-grid">
+            <div class="review-card">
+                <p>⭐⭐⭐⭐⭐</p>
+                <p>
+                    “Bridal makeup bilkul perfect tha 😍  
+                    Natural look mila aur poore din makeup fresh raha.”
+                </p>
+                <p class="review-author">– Pooja Kumari (Bridal Makeup)</p>
+            </div>
+
+            <div class="review-card">
+                <p>⭐⭐⭐⭐⭐</p>
+                <p>
+                    “Facial ke baad skin bahut glowing lag rahi thi ✨  
+                    Clean aur professional service.”
+                </p>
+                <p class="review-author">– Neha Gupta (Facial)</p>
+            </div>
+
+            <div class="review-card">
+                <p>⭐⭐⭐⭐⭐</p>
+                <p>
+                    “Areraj ka best beauty parlour 👍  
+                    Staff friendly hai aur kaam top-class.”
+                </p>
+                <p class="review-author">– Rani Devi</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+                <a 
+                href="https://forms.gle/kMrJKyzn9MBtyERA8" 
+                target="_blank"
+                class="btn btn-primary"
+                style="width:100%; display:inline-block; text-align:center;"
+                >
+                    Submit Review
+                </a>
+
+                <p class="note">
+                    ⚠️ Reviews will be visible after approval (manual for now)
+                </p>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-container">
+        <div class="footer-content">
+            <h3>Divya Beauty Parlour</h3>
+            <p>Location: Areraj, Bihar</p>
+            <p>Phone: <a href="tel:6202770517">6202770517</a></p>
+            <p class="footer-note">
+                Thank you for trusting us ❤️
+            </p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
