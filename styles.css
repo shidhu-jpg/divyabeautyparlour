@@ -307,8 +307,15 @@ nav a:active {
     font-size: 1.2rem;
     text-align: center;
     padding: 2rem;
+    overflow: hidden;
 }
-
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  /* fills box nicely */
+    display: block;
+    border-radius: 20px;
+}
 /* ===== TRUST SECTION ===== */
 .trust-section {
     background: var(--bg-offwhite);
@@ -1170,4 +1177,5 @@ nav a {
         grid-template-columns: repeat(4, 1fr);
     }
 }
+
 
