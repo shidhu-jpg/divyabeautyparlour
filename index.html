@@ -1,198 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="icon" type="image/png" href="favicon.png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
-    <meta name="google-site-verification" content="1A_NnCHxNmRzU3KQzNGnnqKcz-LMkxFky_1UqCZf64Y" />
+<!-- SEO TITLE -->
+<title>Divya Beauty Parlour Areraj | Bridal Makeup & Beauty Services</title>
 
-    <title>Divya Beauty Parlour Areraj | Best Beauty Salon & Bridal Makeup in Areraj, Bihar</title>
-    <meta name="title" content="Divya Beauty Parlour Areraj | Best Beauty Salon & Bridal Makeup in Areraj, Bihar">
-    <meta name="description" content="Divya Beauty Parlour Areraj mein professional bridal makeup, facial, hair styling aur beauty services provide karta hai. 6+ saal ka experience. Appointment ke liye call karein 6202770517.">
-    <meta name="keywords" content="beauty parlour Areraj, bridal makeup Areraj, facial treatment Areraj, hair styling Areraj, beauty salon Areraj">
-    <meta name="author" content="Divya Beauty Parlour">
-    <meta name="robots" content="index, follow">
+<!-- SEO META -->
+<meta name="description" content="Divya Beauty Parlour, Areraj Bihar. 6+ years experience, 10,000+ clients served. Professional bridal makeup, party makeup & beauty services by Chandani Gupta.">
+<meta name="keywords" content="Divya Beauty Parlour Areraj, Bridal Makeup Areraj, Beauty Parlour in Areraj Bihar, Chandani Gupta Makeup Artist">
+<meta name="author" content="Divya Beauty Parlour">
+<meta name="robots" content="index, follow">
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://divyabeautyparlour.in/">
-    <meta property="og:title" content="Divya Beauty Parlour – Professional Beauty & Bridal Makeup Services in Areraj">
-    <meta property="og:description" content="Areraj mein professional bridal makeup aur beauty services. 6+ saal ka experience. Aaj hi appointment book karein.">
-    <meta property="og:image" content="https://divyabeautyparlour.in/images/homeimage.png">
-    <meta property="og:locale" content="en_IN">
+<!-- CANONICAL -->
+<link rel="canonical" href="https://divyabeautyparlour.in/">
 
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://divyabeautyparlour.in/">
-    <meta property="twitter:title" content="Divya Beauty Parlour – Beauty & Bridal Makeup Services in Areraj">
-    <meta property="twitter:description" content="Bridal makeup, facial aur beauty services Areraj mein. Trusted aur experienced beauty parlour.">
-    <meta property="twitter:image" content="https://divyabeautyparlour.in/images/homeimage.png">
+<!-- OPEN GRAPH (WhatsApp / Facebook Preview) -->
+<meta property="og:title" content="Divya Beauty Parlour Areraj">
+<meta property="og:description" content="Trusted bridal makeup & beauty parlour in Areraj. 10,000+ clients served.">
+<meta property="og:image" content="https://divyabeautyparlour.in/images/homeimage.png">
+<meta property="og:url" content="https://divyabeautyparlour.in/">
+<meta property="og:type" content="website">
 
-    <link rel="canonical" href="https://divyabeautyparlour.in/">
+<!-- LOCAL BUSINESS STRUCTURED DATA -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BeautySalon",
+  "name": "Divya Beauty Parlour",
+  "image": "https://divyabeautyparlour.in/images/homeimage.png",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Gandhi Chowk, Near Hanuman Mandir",
+    "addressLocality": "Areraj",
+    "addressRegion": "Bihar",
+    "postalCode": "845458",
+    "addressCountry": "IN"
+  },
+  "telephone": "+91-6202770517",
+  "priceRange": "₹₹",
+  "servesCuisine": "Beauty & Makeup Services",
+  "founder": {
+    "@type": "Person",
+    "name": "Chandani Gupta"
+  }
+}
+</script>
 
-    <!-- Styles -->
-    <link rel="stylesheet" href="styles.css">
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+body { font-family:'Inter',sans-serif; background:#fdfbf7; color:#1a1a1a; scroll-behavior:smooth; }
+h1,h2,h3,.serif { font-family:'Playfair Display',serif; }
+.gold-text { color:#b45309; }
+
+.hero-gradient {
+  background:linear-gradient(to bottom,rgba(0,0,0,.35),rgba(0,0,0,.85));
+}
+
+/* subtle animation */
+.fade-up {
+  opacity:0;
+  transform:translateY(20px);
+  animation:fadeUp .8s ease forwards;
+}
+@keyframes fadeUp {
+  to { opacity:1; transform:translateY(0); }
+}
+
+/* image zoom */
+.zoom-img {
+  transition:transform .4s ease;
+}
+.zoom-img:hover {
+  transform:scale(1.06);
+}
+</style>
 </head>
 
 <body>
-<header>
-    <div class="header-container">
-        <a href="index.html" class="logo">Divya Beauty Parlour</a>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="our-work.html">Our Work</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-                <li><a href="reviews.html">Reviews</a></li>
-            </ul>
-        </nav>
-        <a href="tel:6202770517" class="header-cta">Call Karein: 6202770517</a>
-    </div>
-</header>
+
+<!-- NAV -->
+<nav class="fixed w-full z-40 bg-white/90 backdrop-blur border-b px-6 py-4 flex justify-between items-center">
+  <div class="serif text-xl font-bold uppercase">
+    Divya <span class="gold-text">Beauty Parlour</span>
+  </div>
+  <div class="hidden md:flex space-x-8 text-xs font-bold uppercase tracking-widest">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="our-work.html">Our Work</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <a href="tel:6202770517" class="text-xs font-bold border-b-2 border-black">Call: 6202770517</a>
+</nav>
 
 <!-- HERO -->
-<section class="hero">
-    <div class="hero-container">
-        <div class="hero-content">
-            <h1>Divya Beauty Parlour, Areraj</h1>
-            <p class="tagline">Professional Beauty aur Bridal Care – Areraj, Bihar</p>
-            <p>
-                Divya Beauty Parlour Areraj ka ek trusted beauty salon hai, jahan hygiene, quality products aur personal care par special focus diya jata hai.
-                Hum bridal makeup aur regular beauty treatments mein specialize karte hain, taaki aap apna best look aur feel paa sakein.
-            </p>
-            <div class="hero-buttons">
-                <a href="tel:6202770517" class="btn btn-primary">Abhi Call Karein</a>
-                <a href="https://whatsapp.com/channel/0029Vb6hfzo1XquWOkOfE73U" target="_blank" class="btn btn-whatsapp">WhatsApp Channel Join Karein</a>
-            </div>
-        </div>
-        <div class="hero-image">
-            <img src="images/homeimage.png" alt="Divya Beauty Parlour Areraj - Professional Beauty Services">
-        </div>
+<header class="relative h-[90vh] flex items-center justify-center text-center text-white overflow-hidden">
+  <img src="images/homeimage.png"
+       class="absolute inset-0 w-full h-full object-cover"
+       alt="Divya Beauty Parlour Areraj Exterior">
+
+  <div class="absolute inset-0 hero-gradient"></div>
+
+  <div class="relative z-10 px-4 fade-up">
+    <h1 class="text-5xl md:text-8xl serif mb-6">
+      Aapki Khubsurti,<br>
+      <span class="italic gold-text">Hamari Pehchan.</span>
+    </h1>
+
+    <p class="max-w-2xl mx-auto mb-10">
+      Trusted Bridal Makeup & Beauty Parlour in Areraj, Bihar
+    </p>
+
+    <div class="flex flex-col md:flex-row gap-4 justify-center">
+      <a href="our-work.html" class="bg-amber-700 px-10 py-4 text-xs font-bold uppercase tracking-widest hover:bg-white hover:text-black transition">
+        See Our Work
+      </a>
+      <a href="contact.html" class="border border-white px-10 py-4 text-xs font-bold uppercase tracking-widest hover:bg-white hover:text-black transition">
+        Contact Us
+      </a>
     </div>
+  </div>
+</header>
+
+<!-- OWNER + TRUST -->
+<section class="py-24 px-6 bg-stone-50">
+<div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-start">
+
+  <div class="fade-up">
+    <img src="images/owner_image.jpeg"
+         class="w-full h-[520px] object-cover shadow-xl"
+         alt="Chandani Gupta Bridal Makeup Artist Areraj">
+
+    <div class="mt-6 bg-white p-6 shadow">
+      <h2 class="serif text-2xl">Chandani Gupta – Professional Makeup Artist</h2>
+
+      <p class="text-stone-700 leading-relaxed mt-4">
+        With <strong>6+ years of experience</strong>, Divya Beauty Parlour has served
+        <strong>10,000+ clients</strong> using only <strong>branded makeup products</strong>.
+        More than <strong>80% repeat customers</strong> trust our quality and hygiene.
+      </p>
+
+      <a href="about.html" class="inline-block mt-6 border border-black px-6 py-3 text-xs font-bold uppercase tracking-widest hover:bg-black hover:text-white transition">
+        Read more about owner
+      </a>
+    </div>
+  </div>
+
+  <div class="fade-up">
+    <h2 class="text-4xl serif mb-6 italic">Our Work</h2>
+    <p class="text-stone-700 mb-8">
+      Bridal makeup, party looks & real client transformations in Areraj.
+    </p>
+
+    <div class="grid grid-cols-2 gap-4 mb-8">
+      <img src="images/pi1.jpeg" class="h-40 w-full object-cover zoom-img" alt="Bridal Makeup Areraj Client 1">
+      <img src="images/pi2.jpeg" class="h-40 w-full object-cover zoom-img" alt="Bridal Makeup Areraj Client 2">
+      <img src="images/pi3.jpeg" class="h-40 w-full object-cover zoom-img" alt="Bridal Makeup Areraj Client 3">
+      <img src="images/pi4.jpeg" class="h-40 w-full object-cover zoom-img" alt="Bridal Makeup Areraj Client 4">
+    </div>
+
+    <a href="our-work.html" class="bg-black text-white px-8 py-4 text-xs font-bold uppercase tracking-widest hover:bg-amber-700 transition">
+      See more work
+    </a>
+  </div>
+
+</div>
 </section>
 
-<!-- TRUST -->
-<section class="section trust-section">
-    <div class="container">
-        <div class="trust-grid">
-            <div class="trust-item">
-                <h3>6+</h3>
-                <p>Saalo ka Experience (Kaam dekh kar khud believe karenge)</p>
-            </div>
-            <div class="trust-item">
-                <h3>Premium</h3>
-                <p>Quality Products ka Use</p>
-            </div>
-            <div class="trust-item">
-                <h3>1000+</h3>
-                <p>Happy Clients (80% Repeat Customers)</p>
-            </div>
-            <div class="trust-item">
-                <h3>Trusted</h3>
-                <p>Pure Areraj mein</p>
-            </div>
-        </div>
-    </div>
+<!-- FINAL CTA -->
+<section class="py-20 px-6 text-center bg-white fade-up">
+  <h2 class="text-3xl serif mb-6">Book Your Bridal Makeup Appointment</h2>
+  <a href="contact.html" class="inline-block bg-amber-700 text-white px-10 py-4 text-xs font-bold uppercase tracking-widest hover:bg-black transition">
+    Contact Now
+  </a>
 </section>
 
-<!-- SERVICES -->
-<section class="section">
-    <div class="container">
-        <div class="section-title">
-            <h2>Beauty Services – Areraj</h2>
-        </div>
-        <div class="services-grid">
-            <div class="service-card">
-                <h3>Bridal Makeup – Areraj</h3>
-                <p>Shaadi ke liye complete bridal makeup packages. Aapke special day par flawless aur confident look ensure karte hain.</p>
-            </div>
-            <div class="service-card">
-                <h3>Facial & Skin Care</h3>
-                <p>Professional facial aur skin care treatments, premium products ke saath.</p>
-            </div>
-            <div class="service-card">
-                <h3>Hair Styling</h3>
-                <p>Har occasion ke liye expert hair styling – simple se lekar glamorous looks tak.</p>
-            </div>
-            <div class="service-card">
-                <h3>Waxing & Threading</h3>
-                <p>Soft aur effective hair removal services, clean aur safe techniques ke saath.</p>
-            </div>
-            <div class="service-card">
-                <h3>Party Makeup</h3>
-                <p>Party ya function ke liye long-lasting aur glamorous makeup.</p>
-            </div>
-        </div>
-        <div style="text-align:center; margin-top:3rem;">
-            <a href="services.html" class="btn btn-secondary">Sabhi Services Dekhein</a>
-        </div>
-    </div>
-</section>
-<!-- HOME PAGE REVIEWS -->
-<section class="section reviews-section">
-    <div class="container">
-        <div class="section-title">
-            <h2>Clients Kya Kehte Hain ⭐</h2>
-        </div>
-
-        <div class="reviews-grid">
-            <div class="review-card">
-                <p>⭐⭐⭐⭐⭐</p>
-                <p>
-                    “Bridal makeup bilkul natural tha 😍  
-                    Shaadi ke poore din fresh look raha.”
-                </p>
-                <p class="review-author">– Pooja Kumari</p>
-            </div>
-
-            <div class="review-card">
-                <p>⭐⭐⭐⭐⭐</p>
-                <p>
-                    “Facial ke baad skin glow kar rahi thi ✨  
-                    Service kaafi professional thi.”
-                </p>
-                <p class="review-author">– Neha Gupta</p>
-            </div>
-        </div>
-
-        <div style="text-align:center; margin-top:2rem;">
-            <a href="reviews.html" class="btn btn-secondary">
-                View All Reviews
-            </a>
-        </div>
-    </div>
-</section>
-
-
-
-
-<!-- CONTACT -->
-<section class="contact-cta">
-    <div class="container">
-        <h2>Apna Appointment Book Karein – Areraj</h2>
-        <p>Call karein ya WhatsApp par message bhejein aur apna slot book karein</p>
-        <div class="contact-buttons">
-            <a href="tel:6202770517" class="btn btn-primary">Call: 6202770517</a>
-            <a href="https://whatsapp.com/channel/0029Vb6hfzo1XquWOkOfE73U" target="_blank" class="btn btn-whatsapp">WhatsApp Channel Join Karein</a>
-        </div>
-        <p class="contact-note">Latest work aur updates ke liye hamara WhatsApp channel join karein!</p>
-    </div>
-</section>
-
-<footer>
-    <div class="footer-container">
-        <div class="footer-content">
-            <h3>Divya Beauty Parlour</h3>
-            <p>Location: Areraj, Bihar, India</p>
-            <p>Phone: <a href="tel:6202770517">6202770517</a></p>
-            <p>Bookings ke liye directly call karein ya WhatsApp channel join karein.</p>
-        </div>
-    </div>
+<!-- FOOTER -->
+<footer class="bg-stone-900 text-white py-16 px-6 text-center">
+  <p class="text-stone-400">
+    Divya Beauty Parlour, Gandhi Chowk, Areraj, Bihar
+  </p>
+  <p class="mt-4 font-bold">📞 6202770517</p>
+  <p class="mt-10 text-xs text-stone-500">
+    © 2024 Divya Beauty Parlour Areraj
+  </p>
 </footer>
+
 </body>
 </html>
+
+
 
 
