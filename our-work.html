@@ -4,165 +4,149 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     
-    <!-- Primary Meta Tags -->
     <title>Bridal Makeup Portfolio Areraj | Our Work Gallery | Divya Beauty Parlour Areraj, Bihar</title>
     <meta name="title" content="Bridal Makeup Portfolio Areraj | Our Work Gallery | Divya Beauty Parlour Areraj, Bihar">
-    <meta name="description" content="Divya Beauty Parlour Areraj ka bridal makeup portfolio dekhiye. Hamare professional bridal makeup results aur beauty work gallery explore karein. Appointment ke liye call karein 6202770517.">
+    <meta name="description" content="View our bridal makeup portfolio and beauty work gallery from Divya Beauty Parlour in Areraj, Bihar. See professional bridal makeup results. Call 6202770517 for appointments in Areraj.">
     <meta name="keywords" content="bridal makeup portfolio Areraj, beauty parlour gallery Areraj, makeup before after Areraj, bridal makeup photos Areraj">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://divyabeautyparlour.in/our-work.html">
     
-    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://divyabeautyparlour.in/our-work.html">
-    <meta property="og:title" content="Our Work – Bridal Makeup Portfolio Gallery | Divya Beauty Parlour">
-    <meta property="og:description" content="Hamara bridal makeup portfolio aur beauty work gallery dekhiye. Areraj ke professional bridal makeup results.">
+    <meta property="og:title" content="Our Work - Bridal Makeup Portfolio Gallery | Divya Beauty Parlour">
+    <meta property="og:description" content="View our bridal makeup portfolio and beauty work gallery. Professional bridal makeup results from Areraj.">
     <meta property="og:image" content="https://divyabeautyparlour.in/images/pi1.jpeg">
-    
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://divyabeautyparlour.in/our-work.html">
-    <meta property="twitter:title" content="Our Work – Bridal Makeup Portfolio Gallery | Divya Beauty Parlour">
-    <meta property="twitter:description" content="Hamara bridal makeup portfolio aur beauty work gallery dekhiye. Areraj ke professional results.">
-    <meta property="twitter:image" content="https://divyabeautyparlour.in/images/pi1.jpeg">
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="styles.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        body { font-family: 'Poppins', sans-serif; background-color: #faf9f6; overflow-x: hidden; }
+        .serif { font-family: 'Playfair Display', serif; }
+        
+        /* Premium Auto-Slider */
+        .swiper { width: 100%; height: 75vh; }
+        .swiper-slide img { width: 100%; height: 100%; object-fit: cover; filter: brightness(0.7); }
+
+        /* Smooth Interactive Zoom */
+        .zoom-container { overflow: hidden; border-radius: 12px; cursor: pointer; position: relative; }
+        .zoom-container img { transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1); width: 100%; height: 100%; object-fit: cover; }
+        .zoom-container:hover img { transform: scale(1.1); }
+        
+        /* Glassmorphism Navigation */
+        nav { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(10px); }
+    </style>
 </head>
 <body>
-    <!-- HEADER -->
-    <header>
-        <div class="header-container">
-            <a href="index.html" class="logo">Divya Beauty Parlour</a>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="our-work.html">Our Work</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                    <li><a href="reviews.html">Reviews</a></li>
-                </ul>
-            </nav>
-            <a href="tel:6202770517" class="header-cta">Call Karein: 6202770517</a>
-        </div>
-    </header>
 
-    <!-- GALLERY HERO -->
-    <section class="about-hero">
-        <div class="container">
-            <h1>Divya Beauty Parlour ka Kaam – Areraj</h1>
-            <p style="font-size: 1.2rem; color: var(--text-medium);">
-                Areraj, Bihar mein hamare beautiful bridal transformations ki ek jhalak
+    <nav class="fixed w-full z-50 border-b border-stone-200 px-6 py-4 flex justify-between items-center">
+        <a href="index.html" class="serif text-2xl font-bold tracking-tighter">Divya <span class="text-amber-700">Luxe</span></a>
+        <div class="hidden md:flex space-x-8 text-xs font-bold uppercase tracking-widest">
+            <a href="index.html" class="hover:text-amber-700 transition">Home</a>
+            <a href="about.html" class="hover:text-amber-700 transition">About</a>
+            <a href="services.html" class="hover:text-amber-700 transition">Services</a>
+            <a href="our-work.html" class="text-amber-700">Our Work</a>
+        </div>
+        <a href="tel:6202770517" class="bg-black text-white px-6 py-2 text-xs font-bold rounded-full">Call: 6202770517</a>
+    </nav>
+
+    <div class="swiper mySwiper pt-16">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="images/pi1.jpeg" alt="Bridal Mastery 1"></div>
+            <div class="swiper-slide"><img src="images/pi2.jpeg" alt="Bridal Mastery 2"></div>
+            <div class="swiper-slide"><img src="images/pi3.jpeg" alt="Bridal Mastery 3"></div>
+            <div class="swiper-slide"><img src="images/pi4.jpeg" alt="Bridal Mastery 4"></div>
+        </div>
+        <div class="absolute inset-0 z-10 flex flex-col items-center justify-center text-white pointer-events-none text-center px-4">
+            <h1 class="text-5xl md:text-8xl serif mb-4 italic" data-aos="fade-up">Shandaar Artistry</h1>
+            <p class="text-lg md:text-xl tracking-[0.3em] font-light" data-aos="fade-up" data-aos-delay="200">ARERAJ'S MOST EXCLUSIVE PORTFOLIO</p>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <section class="py-24 px-6 max-w-7xl mx-auto">
+        <div class="text-center mb-20" data-aos="fade-up">
+            <h2 class="text-4xl md:text-6xl serif mb-6 text-stone-900">Hamara Kaam (Our Work)</h2>
+            <p class="text-stone-500 italic text-lg max-w-2xl mx-auto leading-relaxed">
+                Browse through our professional bridal makeup gallery. Har look ko humne dil se sanwara hai.
             </p>
+            <div class="w-20 h-1 bg-amber-700 mx-auto mt-8"></div>
         </div>
-    </section>
 
-    <!-- GALLERY -->
-    <section class="section" style="background: var(--bg-offwhite);">
-        <div class="container">
-            <div class="work-categories">
-                <h2 style="margin-bottom: 1rem;">Bridal Makeup Gallery – Areraj</h2>
-                <p style="color: var(--text-medium); margin-bottom: 1rem;">
-                    Areraj, Bihar mein hamare bridal makeup portfolio ko explore karein
-                </p>
-            </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             
-            <div class="gallery-grid">
-                <!-- Bridal Makeup Images from WhatsApp channel -->
-                <div class="gallery-item">
-                    <img src="images/pi1.jpeg" alt="Bridal Makeup by Divya Beauty Parlour Areraj - Traditional Indian Bridal Look">
-                </div>
-                <div class="gallery-item">
-                    <img src="images/pi2.jpeg" alt="Bridal Makeup Portfolio - Professional Bridal Makeup Services in Areraj">
-                </div>
-                <div class="gallery-item">
-                    <img src="images/pi3.jpeg" alt="Bridal Makeup Gallery - Divya Beauty Parlour Areraj">
-                </div>
-                <div class="gallery-item">
-                    <img src="images/pi4.jpeg" alt="Professional Bridal Makeup - Beauty Services Areraj">
-                </div>
-                <div class="gallery-item">
-                    <img src="images/pi5.jpeg" alt="Bridal Makeup Work - Divya Beauty Parlour Areraj">
-                </div>
-                <div class="gallery-item">
-                    <img src="images/pi6.jpeg" alt="Bridal Makeup Portfolio - Areraj Beauty Parlour">
-                </div>
-                <div class="gallery-item">
-                    <img src="images/pi7.jpeg" alt="Bridal Makeup Services - Divya Beauty Parlour Areraj">
-                </div>
-                <div class="gallery-item">
-                    <img src="images/pi8.jpeg" alt="Bridal Makeup Services - Divya Beauty Parlour Areraj">
-                </div>
-                <div class="gallery-item">
-                    <img src="images/pi9.jpeg" alt="Bridal Makeup Services - Divya Beauty Parlour Areraj">
-                </div>
-                <div class="gallery-item">
-                    <img src="images/pi10.jpeg" alt="Bridal Makeup Services - Divya Beauty Parlour Areraj">
-                </div>
-                <div class="gallery-item">
-                    <img src="images/pi11.jpeg" alt="Bridal Makeup Services - Divya Beauty Parlour Areraj">
-                </div>
-                <div class="gallery-item">
-                    <img src="images/pi12.jpeg" alt="Bridal Makeup Services - Divya Beauty Parlour Areraj">
-                </div>
-                <div class="gallery-item">
-                    <img src="images/pi13.jpeg" alt="Bridal Makeup Services - Divya Beauty Parlour Areraj">
-                </div>
-                <div class="gallery-item">
-                    <img src="images/bridal-makeup-areraj-1.jpg" alt="Bridal Makeup Before After - Divya Beauty Parlour Areraj">
-                </div>
-                <div class="gallery-item">
-                    <img src="images/bridal-makeup-areraj-2.jpg" alt="Professional Bridal Makeup Transformation Areraj">
-                </div>
+            <div class="zoom-container h-[450px] shadow-2xl" data-aos="fade-up">
+                <img src="images/pi1.jpeg" alt="Bridal Look Areraj">
+                <div class="absolute bottom-6 left-6 text-white z-20"><p class="text-xs tracking-widest font-bold">BRIDAL GLOW</p></div>
             </div>
+
+            <div class="zoom-container h-[450px] shadow-2xl md:mt-12" data-aos="fade-up" data-aos-delay="100">
+                <img src="images/pi2.jpeg" alt="Traditional Makeup">
+            </div>
+
+            <div class="zoom-container h-[450px] shadow-2xl" data-aos="fade-up" data-aos-delay="200">
+                <img src="images/pi3.jpeg" alt="Professional Artistry">
+            </div>
+
+            <div class="zoom-container h-[500px] shadow-2xl md:col-span-2" data-aos="zoom-in">
+                <img src="images/pi4.jpeg" alt="Master Transformation">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+            </div>
+
+            <div class="zoom-container h-[450px] shadow-2xl" data-aos="fade-up"><img src="images/pi5.jpeg" alt="Work 5"></div>
+            <div class="zoom-container h-[450px] shadow-2xl" data-aos="fade-up"><img src="images/pi6.jpeg" alt="Work 6"></div>
+            <div class="zoom-container h-[450px] shadow-2xl md:-mt-12" data-aos="fade-up"><img src="images/pi7.jpeg" alt="Work 7"></div>
+            <div class="zoom-container h-[450px] shadow-2xl" data-aos="fade-up"><img src="images/pi8.jpeg" alt="Work 8"></div>
+            <div class="zoom-container h-[450px] shadow-2xl" data-aos="fade-up"><img src="images/pi9.jpeg" alt="Work 9"></div>
+            <div class="zoom-container h-[450px] shadow-2xl" data-aos="fade-up"><img src="images/pi10.jpeg" alt="Work 10"></div>
+            <div class="zoom-container h-[450px] shadow-2xl" data-aos="fade-up"><img src="images/pi11.jpeg" alt="Work 11"></div>
+            <div class="zoom-container h-[450px] shadow-2xl" data-aos="fade-up"><img src="images/pi12.jpeg" alt="Work 12"></div>
+            <div class="zoom-container h-[450px] shadow-2xl" data-aos="fade-up"><img src="images/pi13.jpeg" alt="Work 13"></div>
         </div>
     </section>
 
-    <!-- CONTACT CTA -->
-    <section class="contact-cta">
-        <div class="container">
-            <h2>Areraj Mein Apna Appointment Book Karein</h2>
-            <p>
-                Divya Beauty Parlour, Areraj mein appointment book karne ke liye call karein
-                ya WhatsApp par message bhejein
+    <section class="py-24 bg-stone-900 text-white text-center px-6">
+        <div data-aos="zoom-in">
+            <h2 class="text-4xl md:text-5xl serif mb-6">Book Your Appointment in Areraj</h2>
+            <p class="text-stone-400 mb-12 max-w-2xl mx-auto italic">
+                Aapke special day ke liye perfect look ab bas ek call door hai. 
+                Join our WhatsApp channel to see daily transformations!
             </p>
-            <div class="contact-buttons">
-                <a href="tel:6202770517" class="btn btn-primary">Call: 6202770517</a>
-                <a href="https://whatsapp.com/channel/0029Vb6hfzo1XquWOkOfE73U" target="_blank" class="btn btn-whatsapp">
-                    WhatsApp Channel Join Karein
+            <div class="flex flex-col md:flex-row gap-6 justify-center">
+                <a href="tel:6202770517" class="bg-amber-700 hover:bg-amber-800 px-10 py-4 font-bold rounded-full transition shadow-lg">Call Now: 6202770517</a>
+                <a href="https://whatsapp.com/channel/0029Vb6hfzo1XquWOkOfE73U" class="bg-[#25D366] hover:bg-green-600 px-10 py-4 font-bold rounded-full transition shadow-lg flex items-center justify-center gap-2">
+                    Join WhatsApp Channel
                 </a>
             </div>
-            <p class="contact-note">
-                Aur zyada beautiful bridal transformations dekhne ke liye hamara WhatsApp channel join karein!
-            </p>
         </div>
     </section>
 
-    <!-- FOOTER -->
-    <footer>
-        <div class="footer-container">
-            <div class="footer-content">
-                <h3>Divya Beauty Parlour</h3>
-                <p>Location: Areraj, Bihar, India</p>
-                <p>Phone: <a href="tel:6202770517">6202770517</a></p>
-                <p>
-                    WhatsApp Channel:
-                    <a href="https://whatsapp.com/channel/0029Vb6hfzo1XquWOkOfE73U" target="_blank" style="color: rgba(255, 255, 255, 0.8);">
-                        Hamara Channel Join Karein
-                    </a>
-                </p>
-                <p class="footer-note">
-                    Booking ke liye directly call karein ya WhatsApp channel join karein.
-                </p>
+    <footer class="bg-stone-950 py-12 px-6 border-t border-stone-800">
+        <div class="max-w-7xl mx-auto flex flex-col md:row justify-between items-center text-stone-500 text-sm gap-6">
+            <p>&copy; 2024 Divya Beauty Parlour Areraj. All Rights Reserved.</p>
+            <div class="flex space-x-6">
+                <a href="index.html" class="hover:text-white">Home</a>
+                <a href="contact.html" class="hover:text-white">Location</a>
             </div>
         </div>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Start Animations
+        AOS.init({ duration: 1200, once: true });
+
+        // Start Auto-Slider
+        var swiper = new Swiper(".mySwiper", {
+            loop: true,
+            autoplay: { delay: 4000, disableOnInteraction: false },
+            pagination: { el: ".swiper-pagination", clickable: true },
+            effect: "fade", 
+            fadeEffect: { crossFade: true }
+        });
+    </script>
 </body>
 </html>
-
