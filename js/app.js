@@ -13,72 +13,23 @@
 })();
 
 /* ════════════════════════════════════════════════
-   AURORA CANVAS
+   HERO BG — subtle parallax on scroll
 ════════════════════════════════════════════════ */
-(function initAurora() {
-  const canvas = document.getElementById('auroraCanvas');
-  if (!canvas) return;
-  const ctx = canvas.getContext('2d');
-
-  const blobs = [
-    { x: .35, y: .40, r: .55, h: 280, s: .22, a: .13, dx: .00012, dy: .00008 },
-    { x: .65, y: .55, r: .50, h: 320, s: .28, a: .11, dx:-.00009, dy: .00011 },
-    { x: .50, y: .25, r: .42, h: 260, s: .20, a: .10, dx: .00007, dy:-.00010 },
-    { x: .20, y: .70, r: .38, h: 340, s: .18, a: .09, dx:-.00011, dy:-.00007 },
-  ];
-
-  let W, H, raf, t = 0;
-
-  function resize() {
-    W = canvas.width  = canvas.offsetWidth;
-    H = canvas.height = canvas.offsetHeight;
-  }
-  resize();
-
-  const ro = new ResizeObserver(resize);
-  ro.observe(canvas);
-
-  function draw() {
-    t += 1;
-    ctx.clearRect(0, 0, W, H);
-
-    // Dark base
-    ctx.fillStyle = '#080606';
-    ctx.fillRect(0, 0, W, H);
-
-    blobs.forEach(b => {
-      // Drift blobs gently
-      b.x += b.dx * Math.sin(t * 0.4);
-      b.y += b.dy * Math.cos(t * 0.3);
-
-      const cx = b.x * W;
-      const cy = b.y * H;
-      const r  = b.r * Math.min(W, H);
-
-      const grad = ctx.createRadialGradient(cx, cy, 0, cx, cy, r);
-      const alpha1 = (b.a + 0.04 * Math.sin(t * 0.02)).toFixed(2);
-      const alpha2 = (b.a * 0.3).toFixed(2);
-
-      grad.addColorStop(0,   `hsla(${b.h},${Math.round(b.s*100)}%,55%,${alpha1})`);
-      grad.addColorStop(0.6, `hsla(${b.h},${Math.round(b.s*100)}%,40%,${(alpha2*0.6).toFixed(2)})`);
-      grad.addColorStop(1,   `hsla(${b.h},${Math.round(b.s*100)}%,30%,0)`);
-
-      ctx.fillStyle = grad;
-      ctx.beginPath();
-      ctx.arc(cx, cy, r, 0, Math.PI * 2);
-      ctx.fill();
+(function initHeroParallax() {
+  const bg = document.getElementById('heroBgImg');
+  if (!bg) return;
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (ticking) return;
+    requestAnimationFrame(() => {
+      const y = window.scrollY;
+      if (y < window.innerHeight) {
+        bg.style.transform = `scale(1.06) translateY(${y * 0.18}px)`;
+      }
+      ticking = false;
     });
-
-    // Vignette
-    const vig = ctx.createRadialGradient(W/2, H/2, H*0.1, W/2, H/2, H*0.9);
-    vig.addColorStop(0, 'rgba(8,6,6,0)');
-    vig.addColorStop(1, 'rgba(8,6,6,0.75)');
-    ctx.fillStyle = vig;
-    ctx.fillRect(0, 0, W, H);
-
-    raf = requestAnimationFrame(draw);
-  }
-  draw();
+    ticking = true;
+  }, { passive: true });
 })();
 
 /* ════════════════════════════════════════════════
@@ -203,7 +154,7 @@
   // GSAP is used only for the hero entrance stagger.
   // All other scroll animations are handled by IntersectionObserver + CSS.
   if (typeof gsap === 'undefined') {
-    document.querySelectorAll('.ht-word,#heroBadge,#heroSub,#heroActions,#heroStats,#heroImgCol').forEach(el => {
+    document.querySelectorAll('.ht-word,#heroBadge,#heroSub,#heroActions,#heroStats').forEach(el => {
       el.style.opacity = '1';
       el.style.transform = 'none';
     });
@@ -216,7 +167,6 @@
   gsap.set('#heroSub',     { opacity: 0, y: 20 });
   gsap.set('#heroActions', { opacity: 0, y: 20 });
   gsap.set('#heroStats',   { opacity: 0, y: 16 });
-  gsap.set('#heroImgCol',  { opacity: 0, x: 48, scale: .96 });
 
   // ── Hero entrance timeline ───────────────────
   const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
@@ -225,8 +175,7 @@
     .to('.ht-word',     { opacity: 1, y: 0, stagger: .12, duration: .85, ease: 'power2.out' }, '-=.3')
     .to('#heroSub',     { opacity: 1, y: 0, duration: .65 }, '-=.35')
     .to('#heroActions', { opacity: 1, y: 0, duration: .6  }, '-=.35')
-    .to('#heroStats',   { opacity: 1, y: 0, duration: .6  }, '-=.3')
-    .to('#heroImgCol',  { opacity: 1, x: 0, scale: 1, duration: 1, ease: 'power2.out' }, '-=.9');
+    .to('#heroStats',   { opacity: 1, y: 0, duration: .6  }, '-=.3');
 })();
 
 /* ════════════════════════════════════════════════
