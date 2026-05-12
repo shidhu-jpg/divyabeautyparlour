@@ -203,7 +203,7 @@
   // GSAP is used only for the hero entrance stagger.
   // All other scroll animations are handled by IntersectionObserver + CSS.
   if (typeof gsap === 'undefined') {
-    document.querySelectorAll('.ht-word,#heroBadge,#heroSub,#heroActions,#heroStats').forEach(el => {
+    document.querySelectorAll('.ht-word,#heroBadge,#heroSub,#heroActions,#heroStats,#heroImgCol').forEach(el => {
       el.style.opacity = '1';
       el.style.transform = 'none';
     });
@@ -216,6 +216,7 @@
   gsap.set('#heroSub',     { opacity: 0, y: 20 });
   gsap.set('#heroActions', { opacity: 0, y: 20 });
   gsap.set('#heroStats',   { opacity: 0, y: 16 });
+  gsap.set('#heroImgCol',  { opacity: 0, x: 48, scale: .96 });
 
   // ── Hero entrance timeline ───────────────────
   const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
@@ -224,7 +225,8 @@
     .to('.ht-word',     { opacity: 1, y: 0, stagger: .12, duration: .85, ease: 'power2.out' }, '-=.3')
     .to('#heroSub',     { opacity: 1, y: 0, duration: .65 }, '-=.35')
     .to('#heroActions', { opacity: 1, y: 0, duration: .6  }, '-=.35')
-    .to('#heroStats',   { opacity: 1, y: 0, duration: .6  }, '-=.3');
+    .to('#heroStats',   { opacity: 1, y: 0, duration: .6  }, '-=.3')
+    .to('#heroImgCol',  { opacity: 1, x: 0, scale: 1, duration: 1, ease: 'power2.out' }, '-=.9');
 })();
 
 /* ════════════════════════════════════════════════
