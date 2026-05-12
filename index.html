@@ -1,199 +1,556 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Divya Beauty Parlour Areraj | Bridal Makeup & Beauty Services</title>
+  <meta name="description" content="Divya Beauty Parlour Areraj — 6+ years, 10,000+ clients. Premium bridal makeup & beauty services by Chandani Gupta. Call 6202770517.">
+  <meta name="keywords" content="Divya Beauty Parlour Areraj, Bridal Makeup Areraj, Beauty Parlour Bihar, Chandani Gupta">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://divyabeautyparlour.in/">
+  <link rel="icon" type="image/png" href="favicon.png">
 
-<!-- SEO TITLE -->
-<title>Divya Beauty Parlour Areraj | Bridal Makeup & Beauty Services</title>
+  <!-- Open Graph -->
+  <meta property="og:title" content="Divya Beauty Parlour Areraj | Bridal Makeup">
+  <meta property="og:description" content="Areraj's most trusted bridal makeup studio. 6+ years, 10,000+ clients.">
+  <meta property="og:image" content="https://divyabeautyparlour.in/images/homeimage.png">
+  <meta property="og:url" content="https://divyabeautyparlour.in/">
+  <meta property="og:type" content="website">
 
-<!-- SEO META -->
-<meta name="description" content="Divya Beauty Parlour, Areraj Bihar. 6+ years experience, 10,000+ clients served. Professional bridal makeup, party makeup & beauty services by Chandani Gupta.">
-<meta name="keywords" content="Divya Beauty Parlour Areraj, Bridal Makeup Areraj, Beauty Parlour in Areraj Bihar, Chandani Gupta Makeup Artist">
-<meta name="author" content="Divya Beauty Parlour">
-<meta name="robots" content="index, follow">
+  <!-- Schema -->
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BeautySalon","name":"Divya Beauty Parlour","telephone":"+91-6202770517","address":{"@type":"PostalAddress","streetAddress":"Gandhi Chowk, Near Hanuman Mandir","addressLocality":"Areraj","addressRegion":"Bihar","postalCode":"845458","addressCountry":"IN"},"founder":{"@type":"Person","name":"Chandani Gupta"},"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.9","reviewCount":"150"}}</script>
 
-<!-- CANONICAL -->
-<link rel="canonical" href="https://divyabeautyparlour.in/">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=DM+Sans:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@1,400;1,600&display=swap" rel="stylesheet">
 
-<!-- OPEN GRAPH (WhatsApp / Facebook Preview) -->
-<meta property="og:title" content="Divya Beauty Parlour Areraj">
-<meta property="og:description" content="Trusted bridal makeup & beauty parlour in Areraj. 10,000+ clients served.">
-<meta property="og:image" content="https://divyabeautyparlour.in/images/homeimage.png">
-<meta property="og:url" content="https://divyabeautyparlour.in/">
-<meta property="og:type" content="website">
-
-<!-- LOCAL BUSINESS STRUCTURED DATA -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BeautySalon",
-  "name": "Divya Beauty Parlour",
-  "image": "https://divyabeautyparlour.in/images/homeimage.png",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Gandhi Chowk, Near Hanuman Mandir",
-    "addressLocality": "Areraj",
-    "addressRegion": "Bihar",
-    "postalCode": "845458",
-    "addressCountry": "IN"
-  },
-  "telephone": "+91-6202770517",
-  "priceRange": "₹₹",
-  "servesCuisine": "Beauty & Makeup Services",
-  "founder": {
-    "@type": "Person",
-    "name": "Chandani Gupta"
-  }
-}
-</script>
-
-<script src="https://cdn.tailwindcss.com"></script>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-
-<style>
-body { font-family:'Inter',sans-serif; background:#fdfbf7; color:#1a1a1a; scroll-behavior:smooth; }
-h1,h2,h3,.serif { font-family:'Playfair Display',serif; }
-.gold-text { color:#b45309; }
-
-.hero-gradient {
-  background:linear-gradient(to bottom,rgba(0,0,0,.35),rgba(0,0,0,.85));
-}
-
-/* subtle animation */
-.fade-up {
-  opacity:0;
-  transform:translateY(20px);
-  animation:fadeUp .8s ease forwards;
-}
-@keyframes fadeUp {
-  to { opacity:1; transform:translateY(0); }
-}
-
-/* image zoom */
-.zoom-img {
-  transition:transform .4s ease;
-}
-.zoom-img:hover {
-  transform:scale(1.06);
-}
-</style>
+  <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
 
-<!-- NAV -->
-<nav class="fixed w-full z-40 bg-white/90 backdrop-blur border-b px-6 py-4 flex justify-between items-center">
-  <div class="serif text-xl font-bold uppercase">
-    Divya <span class="gold-text">Beauty Parlour</span>
+<!-- ══ CURSOR ══════════════════════════════════ -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-dot" id="cursorDot"></div>
+
+<!-- ══ WHATSAPP ════════════════════════════════ -->
+<a class="wa-btn" href="https://wa.me/916202770517?text=Hi!%20I%20want%20to%20book%20an%20appointment%20at%20Divya%20Beauty%20Parlour." target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<!-- ══ NAV ════════════════════════════════════ -->
+<nav id="nav">
+  <div class="nav-inner">
+    <a href="#hero" class="nav-logo">
+      <span>Divya</span>
+      <em>Beauty Parlour</em>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="our-work.html">Our Work</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="tel:6202770517" class="nav-cta btn-magnetic">Call Now</a>
+    <button class="nav-burger" id="burger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
   </div>
-  <div class="hidden md:flex space-x-8 text-xs font-bold uppercase tracking-widest">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="our-work.html">Our Work</a>
-    <a href="contact.html">Contact</a>
-  </div>
-  <a href="tel:6202770517" class="text-xs font-bold border-b-2 border-black">Call: 6202770517</a>
 </nav>
+<div class="nav-overlay" id="navOverlay"></div>
 
-<!-- HERO -->
-<header class="relative h-[90vh] flex items-center justify-center text-center text-white overflow-hidden">
-  <img src="images/homeimage.png"
-       class="absolute inset-0 w-full h-full object-cover"
-       alt="Divya Beauty Parlour Areraj Exterior">
+<!-- ══ HERO ══════════════════════════════════ -->
+<section id="hero">
+  <canvas id="auroraCanvas"></canvas>
+  <canvas id="particleCanvas"></canvas>
 
-  <div class="absolute inset-0 hero-gradient"></div>
+  <div class="hero-content">
+    <div class="hero-badge" id="heroBadge">
+      <span class="badge-dot"></span>
+      Areraj's Premier Beauty Studio
+    </div>
 
-  <div class="relative z-10 px-4 fade-up">
-    <h1 class="text-5xl md:text-8xl serif mb-6">
-      Aapki Khubsurti,<br>
-      <span class="italic gold-text">Hamari Pehchan.</span>
+    <h1 class="hero-title" id="heroTitle" aria-label="Aapki Khubsurti Hamari Pehchan">
+      <span class="ht-line"><span class="ht-word">Aapki</span> <span class="ht-word">Khubsurti,</span></span>
+      <span class="ht-line ht-gold"><span class="ht-word">Hamari</span> <span class="ht-word">Pehchan.</span></span>
     </h1>
 
-    <p class="max-w-2xl mx-auto mb-10">
-      Trusted Bridal Makeup & Beauty Parlour in Areraj, Bihar
+    <p class="hero-sub" id="heroSub">
+      Expert in <span id="typedText" class="typed-text">Bridal Makeup</span><span class="typed-cursor" aria-hidden="true">|</span>
     </p>
 
-    <div class="flex flex-col md:flex-row gap-4 justify-center">
-      <a href="our-work.html" class="bg-amber-700 px-10 py-4 text-xs font-bold uppercase tracking-widest hover:bg-white hover:text-black transition">
-        See Our Work
+    <div class="hero-actions" id="heroActions">
+      <a href="tel:6202770517" class="btn btn-gold btn-magnetic">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+        Book Now
       </a>
-      <a href="contact.html" class="border border-white px-10 py-4 text-xs font-bold uppercase tracking-widest hover:bg-white hover:text-black transition">
-        Contact Us
-      </a>
+      <a href="#services" class="btn btn-outline btn-magnetic">View Services</a>
     </div>
-  </div>
-</header>
 
-<!-- OWNER + TRUST -->
-<section class="py-24 px-6 bg-stone-50">
-<div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-start">
-
-  <div class="fade-up">
-    <img src="images/owner_image.jpeg"
-         class="w-full h-[520px] object-cover shadow-xl"
-         alt="Chandani Gupta Bridal Makeup Artist Areraj">
-
-    <div class="mt-6 bg-white p-6 shadow">
-      <h2 class="serif text-2xl">Chandani Gupta – Professional Makeup Artist</h2>
-
-      <p class="text-stone-700 leading-relaxed mt-4">
-        With <strong>6+ years of experience</strong>, Divya Beauty Parlour has served
-        <strong>10,000+ clients</strong> using only <strong>branded makeup products</strong>.
-        More than <strong>80% repeat customers</strong> trust our quality and hygiene.
-      </p>
-
-      <a href="about.html" class="inline-block mt-6 border border-black px-6 py-3 text-xs font-bold uppercase tracking-widest hover:bg-black hover:text-white transition">
-        Read more about owner
-      </a>
+    <div class="hero-stats" id="heroStats">
+      <div class="hs-item"><strong>6+</strong><span>Years</span></div>
+      <div class="hs-sep" aria-hidden="true"></div>
+      <div class="hs-item"><strong>10K+</strong><span>Clients</span></div>
+      <div class="hs-sep" aria-hidden="true"></div>
+      <div class="hs-item"><strong>80%+</strong><span>Repeat</span></div>
+      <div class="hs-sep" aria-hidden="true"></div>
+      <div class="hs-item"><strong>4.9★</strong><span>Rating</span></div>
     </div>
   </div>
 
-  <div class="fade-up">
-    <h2 class="text-4xl serif mb-6 italic">Our Work</h2>
-    <p class="text-stone-700 mb-8">
-      Bridal makeup, party looks & real client transformations in Areraj.
-    </p>
-
-    <div class="grid grid-cols-2 gap-4 mb-8">
-      <img src="images/pi1.jpeg" class="h-40 w-full object-cover zoom-img" alt="Bridal Makeup Areraj Client 1">
-      <img src="images/pi2.jpeg" class="h-40 w-full object-cover zoom-img" alt="Bridal Makeup Areraj Client 2">
-      <img src="images/pi3.jpeg" class="h-40 w-full object-cover zoom-img" alt="Bridal Makeup Areraj Client 3">
-      <img src="images/pi4.jpeg" class="h-40 w-full object-cover zoom-img" alt="Bridal Makeup Areraj Client 4">
-    </div>
-
-    <a href="our-work.html" class="bg-black text-white px-8 py-4 text-xs font-bold uppercase tracking-widest hover:bg-amber-700 transition">
-      See more work
-    </a>
+  <div class="hero-scroll-hint" id="heroScroll" aria-hidden="true">
+    <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
+    <span>Scroll</span>
   </div>
+</section>
 
+<!-- ══ TICKER ════════════════════════════════ -->
+<div class="ticker-band" aria-hidden="true">
+  <div class="ticker-track" id="tickerTrack">
+    <span>6+ Years Experience</span><span class="tick-star">✦</span>
+    <span>10,000+ Happy Clients</span><span class="tick-star">✦</span>
+    <span>80%+ Repeat Customers</span><span class="tick-star">✦</span>
+    <span>100% Branded Products</span><span class="tick-star">✦</span>
+    <span>Areraj's #1 Beauty Studio</span><span class="tick-star">✦</span>
+    <span>Bridal Makeup Specialists</span><span class="tick-star">✦</span>
+    <!-- Duplicate for seamless loop -->
+    <span>6+ Years Experience</span><span class="tick-star">✦</span>
+    <span>10,000+ Happy Clients</span><span class="tick-star">✦</span>
+    <span>80%+ Repeat Customers</span><span class="tick-star">✦</span>
+    <span>100% Branded Products</span><span class="tick-star">✦</span>
+    <span>Areraj's #1 Beauty Studio</span><span class="tick-star">✦</span>
+    <span>Bridal Makeup Specialists</span><span class="tick-star">✦</span>
+  </div>
 </div>
+
+<!-- ══ SERVICES ══════════════════════════════ -->
+<section id="services" class="section-dark">
+  <div class="container">
+    <div class="section-label reveal">What We Offer</div>
+    <h2 class="section-heading reveal">Our <em>Services</em></h2>
+    <p class="section-sub reveal">Premium beauty treatments crafted for every occasion in Areraj</p>
+
+    <div class="services-grid">
+
+      <article class="service-card tilt-card reveal" data-delay="0">
+        <div class="sc-glow"></div>
+        <div class="sc-number">01</div>
+        <div class="sc-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+        </div>
+        <h3>Bridal Makeup</h3>
+        <p>Timeless looks for your most special day. Long-lasting, all-day perfection with premium products.</p>
+        <div class="sc-footer">
+          <span class="sc-price">From ₹2,000</span>
+          <a href="tel:6202770517" class="sc-link">Book →</a>
+        </div>
+      </article>
+
+      <article class="service-card tilt-card reveal" data-delay="80">
+        <div class="sc-glow"></div>
+        <div class="sc-number">02</div>
+        <div class="sc-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 3v1m0 16v1M4.22 4.22l.7.7m12.72 12.72.7.7M3 12H2m20 0h-1M4.22 19.78l.7-.7M19.08 4.92l-.7.7"/><circle cx="12" cy="12" r="5"/></svg>
+        </div>
+        <h3>Party Makeup</h3>
+        <p>Glamorous, all-night looks for every occasion — bold or subtle, exactly how you want it.</p>
+        <div class="sc-footer">
+          <span class="sc-price">From ₹500</span>
+          <a href="tel:6202770517" class="sc-link">Book →</a>
+        </div>
+      </article>
+
+      <article class="service-card tilt-card reveal" data-delay="160">
+        <div class="sc-glow"></div>
+        <div class="sc-number">03</div>
+        <div class="sc-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M12 22C8 22 4 18 4 14c0-4 2-7 5-9 0 3 1.5 5 3 6 1-2 2-5 2-8 2 2 4 5 4 8s-1 4-1 4c2-1 3-3 3-5 1 2 1 4 0 6-1 3-4 5-8 5z"/></svg>
+        </div>
+        <h3>Facial &amp; Skincare</h3>
+        <p>Deep cleansing, brightening &amp; anti-aging treatments. Radiant, glowing skin guaranteed.</p>
+        <div class="sc-footer">
+          <span class="sc-price">From ₹300</span>
+          <a href="tel:6202770517" class="sc-link">Book →</a>
+        </div>
+      </article>
+
+      <article class="service-card tilt-card reveal" data-delay="0">
+        <div class="sc-glow"></div>
+        <div class="sc-number">04</div>
+        <div class="sc-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12"/></svg>
+        </div>
+        <h3>Hair Styling</h3>
+        <p>Bridal updos, party styles, cuts, coloring &amp; treatments. Every strand, perfected.</p>
+        <div class="sc-footer">
+          <span class="sc-price">From ₹200</span>
+          <a href="tel:6202770517" class="sc-link">Book →</a>
+        </div>
+      </article>
+
+      <article class="service-card tilt-card reveal" data-delay="80">
+        <div class="sc-glow"></div>
+        <div class="sc-number">05</div>
+        <div class="sc-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+        </div>
+        <h3>Waxing &amp; Threading</h3>
+        <p>Smooth, flawless skin with gentle techniques. Fully sanitized tools, zero discomfort.</p>
+        <div class="sc-footer">
+          <span class="sc-price">From ₹50</span>
+          <a href="tel:6202770517" class="sc-link">Book →</a>
+        </div>
+      </article>
+
+      <article class="service-card tilt-card service-card--featured reveal" data-delay="160">
+        <div class="sc-glow"></div>
+        <div class="sc-badge-top">Most Popular</div>
+        <div class="sc-number">06</div>
+        <div class="sc-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <h3>Pre-Bridal Package</h3>
+        <p>Complete pre-wedding treatment — skin prep, hair conditioning &amp; a makeup trial included.</p>
+        <div class="sc-footer">
+          <span class="sc-price">From ₹3,000</span>
+          <a href="tel:6202770517" class="sc-link">Book →</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
 </section>
 
-<!-- FINAL CTA -->
-<section class="py-20 px-6 text-center bg-white fade-up">
-  <h2 class="text-3xl serif mb-6">Book Your Bridal Makeup Appointment</h2>
-  <a href="contact.html" class="inline-block bg-amber-700 text-white px-10 py-4 text-xs font-bold uppercase tracking-widest hover:bg-black transition">
-    Contact Now
-  </a>
+<!-- ══ ABOUT ═════════════════════════════════ -->
+<section id="about" class="section-light">
+  <div class="container">
+    <div class="about-grid">
+
+      <div class="about-image-col reveal">
+        <div class="about-img-wrap">
+          <img src="images/owner_image.jpeg" alt="Chandani Gupta — Owner, Divya Beauty Parlour Areraj" loading="lazy">
+          <div class="about-img-tag">
+            <span class="ait-num">6+</span>
+            <span class="ait-lbl">Years of<br>Mastery</span>
+          </div>
+          <div class="about-img-ring"></div>
+        </div>
+      </div>
+
+      <div class="about-text-col">
+        <div class="section-label reveal" style="color:#a8854a">Our Story</div>
+        <h2 class="section-heading reveal" style="color:#1a1010">Meet <em>Chandani Gupta</em></h2>
+
+        <blockquote class="about-quote reveal">"Every woman deserves to feel like the most beautiful version of herself."</blockquote>
+
+        <div class="about-body reveal">
+          <p>With <strong>6+ years</strong> in the beauty industry, I built Divya Beauty Parlour on one principle — care. Bridal makeup is my passion because I know how much that day means to you.</p>
+          <p>We use only <strong>branded, premium products</strong>, maintain the highest hygiene standards, and take the time to truly listen. That's why <strong>80%+ of our clients come back</strong> — and bring their family.</p>
+        </div>
+
+        <div class="about-pills reveal">
+          <div class="pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Hygiene First</div>
+          <div class="pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Premium Products</div>
+          <div class="pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Personalized Care</div>
+          <div class="pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Affordable Pricing</div>
+        </div>
+
+        <div class="about-ctas reveal">
+          <a href="about.html" class="btn btn-dark btn-magnetic">Read Full Story</a>
+          <a href="tel:6202770517" class="btn btn-outline-dark btn-magnetic">6202770517</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
 </section>
 
-<!-- FOOTER -->
-<footer class="bg-stone-900 text-white py-16 px-6 text-center">
-  <p class="text-stone-400">
-    Divya Beauty Parlour, Gandhi Chowk, Areraj, Bihar
-  </p>
-  <p class="mt-4 font-bold">📞 6202770517</p>
-  <p class="mt-10 text-xs text-stone-500">
-    © 2024 Divya Beauty Parlour Areraj
-  </p>
+<!-- ══ GALLERY ════════════════════════════════ -->
+<section id="gallery" class="section-dark">
+  <div class="container">
+    <div class="section-label reveal">Portfolio</div>
+    <h2 class="section-heading reveal">Hamara <em>Kaam</em></h2>
+    <p class="section-sub reveal">Real clients · Real transformations · Areraj, Bihar</p>
+
+    <div class="gallery-filters reveal">
+      <button class="gf-btn active" data-filter="all">All</button>
+      <button class="gf-btn" data-filter="bridal">Bridal</button>
+      <button class="gf-btn" data-filter="facial">Facial</button>
+      <button class="gf-btn" data-filter="hair">Hair</button>
+      <button class="gf-btn" data-filter="party">Party</button>
+    </div>
+
+    <div class="gallery-masonry" id="galleryGrid">
+      <div class="gm-item" data-cat="bridal"><img src="images/pi1.jpeg" alt="Bridal Makeup Areraj" loading="lazy"><div class="gm-overlay">Bridal Glow</div></div>
+      <div class="gm-item" data-cat="bridal"><img src="images/pi2.jpeg" alt="Bridal Look" loading="lazy"><div class="gm-overlay">Bridal Elegance</div></div>
+      <div class="gm-item" data-cat="facial"><img src="images/pi3.jpeg" alt="Facial Areraj" loading="lazy"><div class="gm-overlay">Radiant Skin</div></div>
+      <div class="gm-item" data-cat="party"><img src="images/pi4.jpeg" alt="Party Makeup" loading="lazy"><div class="gm-overlay">Party Glam</div></div>
+      <div class="gm-item" data-cat="bridal"><img src="images/bridal-makeup-areraj-1.jpg" alt="Bridal Areraj" loading="lazy"><div class="gm-overlay">Bridal Transformation</div></div>
+      <div class="gm-item" data-cat="hair"><img src="images/pi6.jpeg" alt="Hair Styling" loading="lazy"><div class="gm-overlay">Hair Artistry</div></div>
+      <div class="gm-item" data-cat="hair"><img src="images/pi7.jpeg" alt="Bridal Updo" loading="lazy"><div class="gm-overlay">Bridal Updo</div></div>
+      <div class="gm-item" data-cat="facial"><img src="images/pi8.jpeg" alt="Skin Glow" loading="lazy"><div class="gm-overlay">Skin Glow</div></div>
+      <div class="gm-item" data-cat="party"><img src="images/pi9.jpeg" alt="Event Makeup" loading="lazy"><div class="gm-overlay">Event Look</div></div>
+    </div>
+
+    <div class="gallery-cta reveal">
+      <a href="our-work.html" class="btn btn-gold btn-magnetic">View Full Portfolio →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══ REVIEWS ════════════════════════════════ -->
+<section id="reviews" class="section-reviews">
+  <div class="container">
+    <div class="section-label reveal">Client Love</div>
+    <h2 class="section-heading reveal">10,000+ <em>Happy Clients</em></h2>
+  </div>
+
+  <div class="reviews-marquee-wrap">
+    <div class="reviews-marquee" id="reviewsMarquee">
+
+      <div class="rv-card">
+        <div class="rv-stars">★★★★★</div>
+        <p>"Bridal makeup bilkul perfect tha! Natural look mila aur poore din makeup fresh raha. Best parlour in Areraj!"</p>
+        <div class="rv-author"><div class="rv-av">PK</div><div><b>Pooja Kumari</b><span>Bridal Makeup</span></div></div>
+      </div>
+
+      <div class="rv-card">
+        <div class="rv-stars">★★★★★</div>
+        <p>"Facial ke baad skin bahut glowing lag rahi thi! Clean aur professional service. Chandani ji bahut caring hain."</p>
+        <div class="rv-author"><div class="rv-av">NG</div><div><b>Neha Gupta</b><span>Facial &amp; Skincare</span></div></div>
+      </div>
+
+      <div class="rv-card">
+        <div class="rv-stars">★★★★★</div>
+        <p>"Areraj ka best beauty parlour! Staff bahut friendly hai aur kaam top-class. Repeat customer hoon main."</p>
+        <div class="rv-author"><div class="rv-av">RD</div><div><b>Rani Devi</b><span>Regular Client</span></div></div>
+      </div>
+
+      <div class="rv-card">
+        <div class="rv-stars">★★★★★</div>
+        <p>"Pre-bridal package liya tha. Skin wedding day par bilkul glowing thi. Bahut khush hoon result se!"</p>
+        <div class="rv-author"><div class="rv-av">AS</div><div><b>Anjali Singh</b><span>Pre-Bridal Package</span></div></div>
+      </div>
+
+      <div class="rv-card">
+        <div class="rv-stars">★★★★★</div>
+        <p>"Hair styling ke liye aayi, bohot sundar updo banaya. Sab ne meri hairstyle ki tarif ki function mein!"</p>
+        <div class="rv-author"><div class="rv-av">PV</div><div><b>Priya Verma</b><span>Hair Styling</span></div></div>
+      </div>
+
+      <div class="rv-card">
+        <div class="rv-stars">★★★★★</div>
+        <p>"Party makeup itna accha tha ki sabne poochha kahan se karvaya. Highly recommend Divya Beauty Parlour!"</p>
+        <div class="rv-author"><div class="rv-av">SK</div><div><b>Sunita Kumari</b><span>Party Makeup</span></div></div>
+      </div>
+
+      <!-- Duplicate for loop -->
+      <div class="rv-card" aria-hidden="true">
+        <div class="rv-stars">★★★★★</div>
+        <p>"Bridal makeup bilkul perfect tha! Natural look mila aur poore din makeup fresh raha. Best parlour in Areraj!"</p>
+        <div class="rv-author"><div class="rv-av">PK</div><div><b>Pooja Kumari</b><span>Bridal Makeup</span></div></div>
+      </div>
+      <div class="rv-card" aria-hidden="true">
+        <div class="rv-stars">★★★★★</div>
+        <p>"Facial ke baad skin bahut glowing lag rahi thi! Clean aur professional service. Chandani ji bahut caring hain."</p>
+        <div class="rv-author"><div class="rv-av">NG</div><div><b>Neha Gupta</b><span>Facial &amp; Skincare</span></div></div>
+      </div>
+      <div class="rv-card" aria-hidden="true">
+        <div class="rv-stars">★★★★★</div>
+        <p>"Areraj ka best beauty parlour! Staff bahut friendly hai aur kaam top-class. Repeat customer hoon main."</p>
+        <div class="rv-author"><div class="rv-av">RD</div><div><b>Rani Devi</b><span>Regular Client</span></div></div>
+      </div>
+      <div class="rv-card" aria-hidden="true">
+        <div class="rv-stars">★★★★★</div>
+        <p>"Pre-bridal package liya tha. Skin wedding day par bilkul glowing thi. Bahut khush hoon result se!"</p>
+        <div class="rv-author"><div class="rv-av">AS</div><div><b>Anjali Singh</b><span>Pre-Bridal Package</span></div></div>
+      </div>
+      <div class="rv-card" aria-hidden="true">
+        <div class="rv-stars">★★★★★</div>
+        <p>"Hair styling ke liye aayi, bohot sundar updo banaya. Sab ne meri hairstyle ki tarif ki function mein!"</p>
+        <div class="rv-author"><div class="rv-av">PV</div><div><b>Priya Verma</b><span>Hair Styling</span></div></div>
+      </div>
+      <div class="rv-card" aria-hidden="true">
+        <div class="rv-stars">★★★★★</div>
+        <p>"Party makeup itna accha tha ki sabne poochha kahan se karvaya. Highly recommend Divya Beauty Parlour!"</p>
+        <div class="rv-author"><div class="rv-av">SK</div><div><b>Sunita Kumari</b><span>Party Makeup</span></div></div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="rv-cta reveal">
+    <a href="https://forms.gle/kMrJKyzn9MBtyERA8" target="_blank" rel="noopener" class="text-link-gold">Share your experience →</a>
+  </div>
+</section>
+
+<!-- ══ CONTACT ════════════════════════════════ -->
+<section id="contact" class="section-contact">
+  <div class="container">
+    <div class="contact-grid">
+
+      <div class="contact-left reveal">
+        <div class="section-label">Book Appointment</div>
+        <h2 class="section-heading" style="color:#FAF5EF">Get In <em>Touch</em></h2>
+        <p class="contact-lead">Ready to look your best? Reach out via call, WhatsApp or fill the form below.</p>
+
+        <div class="contact-info-list">
+          <a href="tel:6202770517" class="ci-item">
+            <div class="ci-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg></div>
+            <div><p>Phone / Call</p><strong>6202770517</strong></div>
+          </a>
+          <a href="https://wa.me/916202770517" target="_blank" rel="noopener" class="ci-item">
+            <div class="ci-icon ci-icon--green"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></div>
+            <div><p>WhatsApp</p><strong>Chat With Us</strong></div>
+          </a>
+          <div class="ci-item ci-item--static">
+            <div class="ci-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+            <div><p>Location</p><strong>Gandhi Chowk, Areraj, Bihar</strong></div>
+          </div>
+        </div>
+
+        <div class="contact-quote">
+          <span aria-hidden="true">"</span>
+          Aapki Khubsurti,<br>Hamari Pehchan.
+          <span aria-hidden="true">"</span>
+        </div>
+      </div>
+
+      <div class="contact-right reveal" style="--delay:.15s">
+        <div class="contact-form-box">
+          <h3>Send a Message</h3>
+          <p>We'll reply within hours. Or call directly anytime!</p>
+
+          <form id="bookingForm" novalidate>
+            <div class="fg">
+              <label for="f-name">Your Name *</label>
+              <input type="text" id="f-name" name="name" placeholder="Aapka naam" required autocomplete="name">
+              <span class="ferr" id="err-name"></span>
+            </div>
+            <div class="fg">
+              <label for="f-phone">Phone Number *</label>
+              <input type="tel" id="f-phone" name="phone" placeholder="10-digit mobile number" required inputmode="numeric">
+              <span class="ferr" id="err-phone"></span>
+            </div>
+            <div class="fg">
+              <label for="f-service">Service *</label>
+              <select id="f-service" name="service" required>
+                <option value="">Select a service…</option>
+                <option>Bridal Makeup</option>
+                <option>Party Makeup</option>
+                <option>Facial &amp; Skincare</option>
+                <option>Hair Styling</option>
+                <option>Waxing &amp; Threading</option>
+                <option>Pre-Bridal Package</option>
+                <option>Other</option>
+              </select>
+              <span class="ferr" id="err-service"></span>
+            </div>
+            <div class="fg">
+              <label for="f-msg">Message <small>(optional)</small></label>
+              <textarea id="f-msg" rows="3" placeholder="Koi specific requirement ho toh batayein…"></textarea>
+            </div>
+            <button type="submit" class="btn btn-gold btn-full" id="formBtn">
+              <span>Send via WhatsApp</span>
+            </button>
+          </form>
+
+          <div class="form-success" id="formSuccess" hidden>
+            <svg class="chk-svg" viewBox="0 0 52 52">
+              <circle class="chk-circle" cx="26" cy="26" r="25" fill="none"/>
+              <path class="chk-path" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+            </svg>
+            <h3>Message Sent!</h3>
+            <p>Opening WhatsApp — we'll see you soon!</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ CTA BAND ════════════════════════════════ -->
+<section class="cta-band">
+  <div class="cta-band-inner reveal">
+    <p class="cta-band-pre">Ready to glow?</p>
+    <h2 class="cta-band-heading">Book Your Appointment Today</h2>
+    <div class="cta-band-btns">
+      <a href="tel:6202770517" class="btn btn-gold btn-magnetic">📞 Call: 6202770517</a>
+      <a href="https://wa.me/916202770517" target="_blank" rel="noopener" class="btn btn-outline btn-magnetic">WhatsApp Us</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOOTER ═════════════════════════════════ -->
+<footer id="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="ft-brand">
+        <p class="ft-logo">Divya <span>Beauty</span> Parlour</p>
+        <p class="ft-tagline">Aapki Khubsurti, Hamari Pehchan.</p>
+        <p class="ft-addr">Gandhi Chowk, Near Hanuman Mandir<br>Areraj, Bihar — 845458</p>
+        <a href="tel:6202770517" class="ft-phone">📞 6202770517</a>
+      </div>
+      <div class="ft-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="our-work.html">Our Work</a></li>
+          <li><a href="reviews.html">Reviews</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="ft-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services.html">Bridal Makeup</a></li>
+          <li><a href="services.html">Party Makeup</a></li>
+          <li><a href="services.html">Facial &amp; Skincare</a></li>
+          <li><a href="services.html">Hair Styling</a></li>
+          <li><a href="services.html">Pre-Bridal Package</a></li>
+        </ul>
+      </div>
+      <div class="ft-col">
+        <h4>Connect</h4>
+        <div class="ft-socials">
+          <a href="https://whatsapp.com/channel/0029Vb6hfzo1XquWOkOfE73U" target="_blank" rel="noopener" aria-label="WhatsApp Channel" class="ft-social">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          </a>
+          <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram" class="ft-social">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook" class="ft-social">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+          </a>
+        </div>
+        <a href="https://whatsapp.com/channel/0029Vb6hfzo1XquWOkOfE73U" target="_blank" rel="noopener" class="ft-wa-btn">Join WhatsApp Channel</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Divya Beauty Parlour, Areraj, Bihar. All rights reserved.</p>
+      <p>Made with ❤️ for Areraj's most beautiful clients</p>
+    </div>
+  </div>
 </footer>
+
+<!-- ══ LIGHTBOX ═══════════════════════════════ -->
+<div id="lightbox" class="lightbox" hidden>
+  <button class="lb-x" id="lbClose" aria-label="Close">✕</button>
+  <button class="lb-arrow lb-prev" id="lbPrev" aria-label="Previous">‹</button>
+  <button class="lb-arrow lb-next" id="lbNext" aria-label="Next">›</button>
+  <div class="lb-wrap">
+    <img id="lbImg" src="" alt="">
+    <p class="lb-cap" id="lbCap"></p>
+  </div>
+</div>
+
+<!-- ══ SCRIPTS ════════════════════════════════ -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="js/app.js"></script>
 
 </body>
 </html>
-
-
-
-
-
-
